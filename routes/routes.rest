@@ -1,4 +1,4 @@
-GET http://localhost:3005/quotes
+GET http://localhost:3000/quotes
 
 ###
 
@@ -6,7 +6,7 @@ GET http://localhost:3005/subscribers/6386c23bd8d550d5056d9f58
 
 ###
 
-POST http://localhost:3005/quotes
+POST http://localhost:3000/api/quotes
 Content-Type: application/json
 
 {
