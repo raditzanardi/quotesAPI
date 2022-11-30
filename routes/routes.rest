@@ -10,8 +10,8 @@ POST http://localhost:3000/quotes
 Content-Type: application/json
 
 {
-    "quote": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
-    "source": "Winston Churchill",
+    "quote": "Test quote.",
+    "source": "Radit zanardi",
     "year": 1965
 }
 
