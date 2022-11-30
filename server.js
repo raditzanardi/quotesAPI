@@ -12,6 +12,6 @@ db.once('open', () => console.log('connected to database'))
 app.use(express.json())
 
 const quotesRouter = require('./routes/quotes')
-app.use('/quotes', quotesRouter)
+app.use('/', quotesRouter)
 
 app.listen(3000, () => console.log('server started'))

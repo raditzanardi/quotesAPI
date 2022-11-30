@@ -2,8 +2,13 @@ const express = require('express')
 const router = express.Router()
 const Quote = require('../models/quote')
 
-//Getting all quotes
 router.get('/', async (req, res) => {
+    res.send('Api is running')
+})
+
+
+//Getting all quotes
+router.get('/quotes', async (req, res) => {
     try{
         const quotes = await Quote.find()
         res.json(quotes)
@@ -14,11 +19,11 @@ router.get('/', async (req, res) => {
 
 //Getting one
 router.get('/:id', getQuote, (req, res) => {
-    res.json(res.subscriber)
+    res.json(res.quote)
 })
 
 //Creating one
-router.post('/', async (req, res) => {
+router.post('/quotes', async (req, res) => {
     const quote = new Quote({
         quote: req.body.quote,
         source: req.body.source,
@@ -33,7 +38,7 @@ router.post('/', async (req, res) => {
 })
 
 //Updating one
-router.patch('/:id', getQuote, async (req, res) => {
+router.patch('/quotes/:id', getQuote, async (req, res) => {
     if (req.body.quote != null) {
         res.quote.quote = req.body.quote
     }
@@ -49,7 +54,7 @@ router.patch('/:id', getQuote, async (req, res) => {
 })
 
 //Deleting one
-router.delete('/:id', getQuote, async (req, res) => {
+router.delete('/quotes/:id', getQuote, async (req, res) => {
     try{
         await res.quote.remove()
         res.json({message: 'Deleted quote'})

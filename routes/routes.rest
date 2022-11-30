@@ -2,11 +2,11 @@ GET http://localhost:3000/quotes
 
 ###
 
-GET http://localhost:3005/subscribers/6386c23bd8d550d5056d9f58
+GET http://localhost:3000/6386d168770eb35c785138db
 
 ###
 
-POST http://localhost:3000/api/quotes
+POST http://localhost:3000/quotes
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3005/quotes/6386cebd8e46d54b629c1bce
+DELETE http://localhost:3000/quotes/6386d1ea770eb35c785138e3
 
 ###
 
